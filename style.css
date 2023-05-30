@@ -25,3 +25,11 @@
 #navbar {
     border-bottom: 1px solid #7a7a7a;
 }
+
+#navbar a:hover {
+    color: #7a7a7a;
+}
+
+#navbar a.active {
+    border-bottom: 1px solid #050505;
+}
