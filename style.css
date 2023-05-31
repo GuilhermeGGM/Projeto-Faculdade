@@ -180,19 +180,34 @@
 
 /* Destaques*/
 
-#card-destaques{
-    max-width: 540px;
-    margin-right: 1%;
-    margin-left: 1.5%;
-    
+.card img {
+    width: 100%;
+    border-radius: 5px;
 }
 
-.card-text {
+.card-desc {
+    margin-top: 0.5em;
     color: #4e4e4e;
 }
 
-#card-image {
-    max-width: 30em;  
+.addres-text {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+
+    #card-destaques{
+        max-width: 33em;
+        margin-right: 1%;
+        margin-left: 1.5%;
+        max-height: 16em;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .card:hover{
+        box-shadow: 4px 6px 16px #000;
+    }
 }
 
 
