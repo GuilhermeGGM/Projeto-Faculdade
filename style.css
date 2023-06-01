@@ -116,6 +116,10 @@
       bottom: 7em;
     }
 }
+
+h1 {
+    padding-top: 2.5em;
+}
 /* Mini Banners */
 #mini-banners{
     margin-bottom: 4em;
@@ -145,8 +149,6 @@
         margin-top: -6em;
     }
 }
-
-/* Destaques */
 
 .tittle {
     font-size: 1.75em;
@@ -210,6 +212,17 @@
     }
 }
 
+/* Formulário de venda de imóvel*/
+
+#dados-pessoais {
+    margin-bottom: 0.5em;
+}
+
+/* Políticas de Privacidade e Termos de Uso*/
+#termos,
+#politica-privacidade{
+    padding-top: 3em;
+}
 
 /* FOOTER TOP */
 #footer {
