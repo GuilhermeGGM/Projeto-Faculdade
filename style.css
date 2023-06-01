@@ -207,15 +207,23 @@ h1 {
         transition: all 0.5s ease;
     }
 
-    .card:hover{
+    #card-destaques:hover{
         box-shadow: 4px 6px 16px #000;
     }
 }
 
 /* Formulário de venda de imóvel*/
-
+#inf-adc,
+#dados-imovel,
 #dados-pessoais {
     margin-bottom: 0.5em;
+}
+
+#btn-vendas-usuario {
+    max-width: 15em;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    
 }
 
 /* Políticas de Privacidade e Termos de Uso*/
