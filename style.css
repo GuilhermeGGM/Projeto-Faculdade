@@ -232,6 +232,19 @@ h1 {
     padding-top: 3em;
 }
 
+/* Contato */
+#dados-cliente {
+    padding-bottom: 3px;
+}
+
+#txtMensagem{
+    height: 200px;
+}
+
+#btn-mensagem-usuario{
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+}
 /* FOOTER TOP */
 #footer {
     padding: 3em 2em;
