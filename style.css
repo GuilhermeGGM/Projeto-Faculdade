@@ -237,14 +237,61 @@ h1 {
     padding-bottom: 3px;
 }
 
-#txtMensagem{
+#txtMensagem {
     height: 200px;
 }
 
-#btn-mensagem-usuario{
+#btn-mensagem-usuario {
     padding-top: 1.5em;
     padding-bottom: 2em;
 }
+/* Trabalhe conosco*/
+#info-adc-candidato {
+    padding-top: 0.7em;
+    padding-bottom: 2em;
+}
+
+#btn-candidato {
+    max-width: 15em;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+}
+
+/*vendas*/
+#refinarBusca {
+    width: 25%;
+    background-color: #eeecec;
+}
+
+#card-venda {
+    margin-left: 1em;
+    max-height: 25em;
+    max-width: 18em;
+}
+
+#card-icon{
+    margin-right: 1em;
+}
+
+#btn-card-venda{
+    margin-top: 0.5em;
+    border-radius: 5px;
+}
+@media (min-width: 768px) {
+
+    #card-venda {
+        margin-left: 1em;
+        max-height: 27em;
+        max-width: 18em;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    #card-venda:hover {
+        box-shadow: 4px 6px 16px #000;
+    }
+}
+
 /* FOOTER TOP */
 #footer {
     padding: 3em 2em;
@@ -333,4 +380,4 @@ h1 {
       padding-left: 2em;
     }
 }
-  
+
