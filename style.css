@@ -258,15 +258,15 @@ h1 {
 }
 
 /*vendas*/
-#refinarBusca {
-    width: 25%;
-    background-color: #eeecec;
+
+#btn-filtros-confirm,
+#btn-filtros {
+    border-radius: 5px;
 }
 
 #card-venda {
     margin-left: 1em;
-    max-height: 25em;
-    max-width: 18em;
+    margin-bottom: 1em;
 }
 
 #card-icon{
@@ -281,8 +281,9 @@ h1 {
 
     #card-venda {
         margin-left: 1em;
-        max-height: 27em;
-        max-width: 18em;
+        margin-bottom: 1em;
+        max-height: 26em;
+        max-width: 16.4em;
         cursor: pointer;
         transition: all 0.5s ease;
     }
@@ -290,6 +291,16 @@ h1 {
     #card-venda:hover {
         box-shadow: 4px 6px 16px #000;
     }
+}
+
+/*Imovel*/
+
+#subImg-produto{
+    cursor: pointer;
+}
+
+#imovel {
+    padding-top: 5.5em;
 }
 
 /* FOOTER TOP */
