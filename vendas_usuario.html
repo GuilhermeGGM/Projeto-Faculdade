@@ -1,399 +1,404 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anuncie seu Imóvel </title>
-    <link 
-      rel="shortcut icon" 
-      href="img/clc.ico" 
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="img/clc.ico" type="image/x-icon" />
     <!-- Google Fonts|Lato -->
-    <link 
-      rel="preconnect" 
-      href="https://fonts.googleapis.com"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" 
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet" />
     <!-- CSS do Bootstrap -->
-    <link 
-      rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-      crossorigin="anonymous"
-    />
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building-fill" viewBox="0 0 16 16">
-      <path d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building-fill"
+        viewBox="0 0 16 16">
+        <path
+            d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z" />
     </svg>
     <!-- Bootstrap Icons-->
-    <link 
-      rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <!-- CSS do projeto -->
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <!-- JavaScript Bootstrap-->
-    <script 
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
-      <div class="container py-3">
-        <a href="index.html" class="navbar-brand primary-color">
-          <img src="img/clc-icon.png" alt="CLC">
-          <span>CL&C</span>
-        </a>
-        <button 
-          class="navbar-toggle" 
-          type="button" 
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar-items"
-          aria-controls="navbar-items"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-        <div class="navbar-collapse" id="navbar-items">
-          <ul class="navbar-nav me-auto mp-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active primary-color" aria-current="page">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="vendas.html" class="nav-link primary-color">Imóveis Prontos</a>
-            </li>
-            <li class="nav-item">
-              <a href="vendas_usuario.html" class="nav-link primary-color">Anuncie seu Imóvel</a>
-            </li>
-            <li class="nav-item">
-              <a href="trabalhe_conosco.html" class="nav-link primary-color">Trabalhe Conosco</a>
-            </li>
-            <li class="nav-item">
-              <a href="contato.html" class="nav-link primary-color">Contato</a>
-            </li>
-          </ul>
+        <div class="container py-3">
+            <a href="index.html" class="navbar-brand primary-color">
+                <img src="img/clc-icon.png" alt="CLC">
+                <span>CL&C</span>
+            </a>
+            <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="navbar-collapse" id="navbar-items">
+                <ul class="navbar-nav me-auto mp-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active primary-color" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vendas.html" class="nav-link primary-color">Imóveis Prontos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vendas_usuario.html" class="nav-link primary-color">Anuncie seu Imóvel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="trabalhe_conosco.html" class="nav-link primary-color">Trabalhe Conosco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link primary-color">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
     <!-- Formulário de venda de imóvel-->
     <div class="container">
-      <h1>Anuncie aqui seu imóvel</h1>
-      <hr>
-      <!-- Dados do proprietário-->
-      <form>
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <fieldset class="row">
-              <legend>Dados do Proprietário</legend>
-              <div id="dados-proprietario">
-                <label for="txt-nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="txt-nome">
-              </div>
-              <div id="dados-proprietario">
-                <label for="txt-profissao-cliente" class="form-label">Profissão</label>
-                <input type="text" class="form-control" id="txt-profissao-cliente">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-proprietario">
-                <label for="txt-cpf" class="form-label">CPF</label>
-                <span class="form-text">(apenas números)</span>
-                <input type="text" class="form-control" id="txt-cpf">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-proprietario">
-                <label for="txt-rg" class="form-label">RG</label>
-                <span class="form-text">(apenas números)</span>
-                <input type="text" class="form-control" id="txt-rg">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-proprietario">
-                <label for="txt-data-nascimento" class="form-label">Data de Nascimento</label>
-                <input type="date" class="form-control" id="txt-data-nascimento">
-              </div>
-              <div class="col-md-8" id="dados-proprietario">
-                <label for="txt-email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="txt-email">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-proprietario">
-                <label for="txt-estado-civil" class="form-label">Estado Civil</label>
-                <select class="form-control" name="estado-civil" id="estado-civil">
-                  <option value selected="selecione">--Selecione--</option>
-                  <option value="Casado">Casado</option>
-                  <option value="Divorciado">Divorciado</option>
-                  <option value="Solteiro">Solteiro</option>
-                  <option value="Viuvo">Viúvo</option>
-                </select>
-              </div>
-              <div class="col-md-6" id="dados-proprietario">
-                <label for="txt-data-nascimento" class="form-label">Celular</label>
-                <input type="tel" class="form-control" id="txt-celular" placeholder="11999555222">
-                <span class="form-text">(com DDD, apenas números)</span>
-              </div>
-            </fieldset>
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <fieldset class="row">
-              <legend>Endereço do Proprietário</legend>
-              <div class="col-md-8" id="dados-proprietario">
-                <label for="txt-rua-proprietario" class="form-label">Rua (com número da casa)</label>
-                <input type="text" class="form-control" id="txt-rua-proprietario">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-proprietario">
-                <label for="txt-cep" class="form-label">CEP</label>
-                <span class="form-text">(apenas números)</span>
-                <input type="text" class="form-control" id="txt-cep">
-              </div>
-              <div class="col-md-8" id="dados-proprietario">
-                <label for="txt-bairro-proprietario" class="form-label">Bairro</label>
-                <input type="text" class="form-control" id="txt-bairro-proprietario">
-              </div>
-              <div class="col-md-8" id="dados-proprietario">
-                <label for="txt-cidade-proprietario" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="txt-cidade-proprietario">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-proprietario">
-                <label for="txt-estado" class="form-label">Estado</label>
-                <select class="form-control" name="estado-proprietario" id="estado-proprietario">
-                  <option value selected = "select"> --Selecione-- </option>
-                  <option value="Alagoas">Alagoas</option>
-                  <option value="Amazonas">Amazonas</option>
-                  <option value="Amapa">Amapá</option>
-                  <option value="Bahia">Bahia</option>
-                  <option value="Ceara">Ceará</option>
-                  <option value="Distrito-Federal">Distrito Federal</option>
-                  <option value="Espirito-Santo">Espírito Santo</option>
-                  <option value="Goias">Goiás</option>
-                  <option value="Maranhao">Maranhão</option>
-                  <option value="Minas-Gerais">Minas Gerais</option>
-                  <option value="Mato-Grosso-do-Sul">Mato Grosso do Sul</option>
-                  <option value="Mato-Grosso">Mato Grosso</option>
-                  <option value="Paraiba">Paraíba</option>
-                  <option value="Pernambuco">Pernambuco</option>
-                  <option value="Piaui">Piauí</option>
-                  <option value="Parana">Paraná</option>
-                  <option value="Rio-de-Janeiro">Rio de Janeiro</option>
-                  <option value="Rio-Grande-do-Norte">Rio Grande do Norte</option>
-                  <option value="Rondoia">Rôndonia</option>
-                  <option value="Roraima">Roraima</option>
-                  <option value="Rio-Grande-do-Sul">Rio Grande do Sul</option>
-                  <option value="Santa-Catarina">Santa Catarina</option>
-                  <option value="Sergipe">Sergipe</option>
-                  <option value="Sao-Paulo">São Paulo</option>
-                  <option value="Tocantins">Tocantins</option>
-                </select>
-              </div>
-            </fieldset>
-          </div>
-          <hr>
-      <!-- Dados do imóvel-->
-          <div class="col-sm-12 col-md-6">
-            <fieldset class="row">
-              <legend>Dados do Imóvel</legend>
-              <div class="col-md-6 col-xl-4" id="dados-imovel">
-                <label for="txt-area-util" class="form-label">Área Útil M²</label>
-                <input type="text" class="form-control" id="txt-area-util">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-imovel">
-                <label for="txt-area-total" class="form-label">Área Total M²</label>
-                <input type="text" class="form-control" id="txt-area-total">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-imovel">
-                <label for="txt-dormitorios" class="form-label">Dormitórios (Qtn)</label>
-                <input type="text" class="form-control" id="txt-dormitorios">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-imovel">
-                <label for="txt-suites" class="form-label">Suítes (Qtn)</label>
-                <input type="text" class="form-control" id="txt-suites">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-imovel">
-                <label for="txt-vagas" class="form-label">Vagas (Qtn)</label>
-                <input type="text" class="form-control" id="txt-vagas">
-              </div>
-            </fieldset>
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <fieldset class="row">
-              <legend>Endereço do Imóvel</legend>
-              <div class="col-md-8" id="dados-imovel">
-                <label for="txt-rua-proprietario" class="form-label">Rua (com número da casa)</label>
-                <input type="text" class="form-control" id="txt-rua-proprietario">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-imovel">
-                <label for="txt-cep" class="form-label">CEP</label>
-                <span class="form-text">(apenas números)</span>
-                <input type="text" class="form-control" id="txt-cep">
-              </div>
-              <div class="col-md-8" id="dados-imovel">
-                <label for="txt-bairro-proprietario" class="form-label">Bairro</label>
-                <input type="text" class="form-control" id="txt-bairro-proprietario">
-              </div>
-              <div class="col-md-8" id="dados-imovel">
-                <label for="txt-cidade-proprietario" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="txt-cidade-proprietario">
-              </div>
-              <div class="col-md-6 col-xl-4" id="dados-imovel">
-                <label for="txt-estado" class="form-label">Estado</label>
-                <select class="form-control" name="estado-proprietario" id="estado-proprietario">
-                  <option value selected="select"> --Selecione-- </option>                  
-                </select>
-              </div>
-            </fieldset>
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <fieldset class="row">
-              <legend>Objetivo da venda</legend>             
-              <div class="col-md-6 col-xl-6" id="dados-imovel">
-                <label for="txt-pretende" class="form-label">Pretende</label>
-                <select class="form-control" name="pretende" id="pretende">
-                  <option value selected="select"> --Selecione-- </option>
-                  <option value="Alugar">Alugar</option>
-                  <option value="Vender">Vender</option>
-                  <option value="Alugar-e-vender">Alugar e Vender</option>
-                </select>
-              </div>
-              <div class="col-md-6 col-xl-6" id="dados-imovel">
-                <label for="txt-tipo" class="form-label">Tipo</label>
-                <select class="form-control" name="tipo" id="tipo">
-                  <option value selected="select"> --Selecione-- </option>
-                  <option value="Apartamento"> Apartamento </option>
-                  <option value="Casa"> Casa </option>
-                  <option value="Casa-em-condominio"> Casa em Condomínio </option>
-                  <option value="Cobertura"> Cobertura </option>
-                  <option value="Duplex"> Duplex </option>
-                  <option value="Triplex"> Triplex </option>
-                  <option value="Terreno"> Terreno </option>
-                  <option value="Terreno-em-condominio"> Terreno em Condomínio </option>
-                  <option value="Conjunto-comercial"> Conjunto Comercial </option>
-                  <option value="Flat"> Flat </option>
-                  <option value="Galpao"> Galpão </option>
-                  <option value="Loft"> Loft </option>
-                  <option value="Loja"> Loja </option>
-                  <option value="Loja-em-edificio"> Loja em Edifício </option>
-                  <option value="Predio"> Prédio </option>
-                  <option value="Studio"> Studio </option>
-                </select>
-              </div>
-              <div class="col-md-6 col-xl-6" id="dados-imovel">
-                <label for="txt-finalidade" class="form-label">Finalidade</label>
-                <select class="form-control" name="finalidade" id="finalidade">
-                  <option value selected="select"> --Selecione-- </option>
-                  <option value="Comercial"> Comercial </option>
-                  <option value="Residencial"> Residencial </option>                  
-                </select>
-              </div>
-            </fieldset>
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <fieldset class="row">
-              <legend>Dados do Imóvel</legend>
-              <div class="col-md-6 col-xl-6" id="dados-imovel">
-                <label for="txt-valor-venda" class="form-label">Valor de Venda R$</label>
-                <input type="text" class="form-control" id="txt-valor-venda">
-              </div>
-              <div class="col-md-6 col-xl-6" id="dados-imovel">
-                <label for="txt-valor-locacao" class="form-label">Valor de Locação R$</label>
-                <input type="text" class="form-control" id="txt-valor-locacao">
-              </div>
-              <div id="inf-adc">
-                <label>Informações Adicionais</label>
-                <textarea class="form-control" name="info-adc" id="info-adc" rows="4" ></textarea>
-              </div>
-            </fieldset>
-          </div>
-          <div class="d-grid gap-2 col-6 mx-auto" id="btn-vendas-usuario">
-            <button type="button" class="btn btn-outline-secondary">Cadastrar Imóvel</button>     
-          </div>
-        </div>
-      </form>
-    </div> 
+        <h1>Anuncie aqui seu imóvel</h1>
+        <hr>
+        <!-- Dados do proprietário-->
+        <form>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row">
+                        <legend>Dados do Proprietário</legend>
+                        <div id="dados-proprietario">
+                            <label for="txt-nome" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome">
+                        </div>
+                        <div id="dados-proprietario">
+                            <label for="txt-profissao-cliente" class="form-label">Profissão</label>
+                            <input type="text" class="form-control" id="profissao-cliente">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-proprietario">
+                            <label for="txt-cpf" class="form-label">CPF</label>
+                            <span class="form-text">(apenas números)</span>
+                            <input type="text" class="form-control" id="cpf">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-proprietario">
+                            <label for="txt-rg" class="form-label">RG</label>
+                            <span class="form-text">(apenas números)</span>
+                            <input type="text" class="form-control" id="rg">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-proprietario">
+                            <label for="txt-data-nascimento" class="form-label">Data de Nascimento</label>
+                            <input type="date" class="form-control" id="data-nascimento">
+                        </div>
+                        <div class="col-md-8" id="dados-proprietario">
+                            <label for="txt-email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-proprietario">
+                            <label for="txt-estado-civil" class="form-label">Estado Civil</label>
+                            <select class="form-control" name="estado-civil" id="estado-civil">
+                                <option value selected="selecione">--Selecione--</option>
+                                <option value="Casado">Casado</option>
+                                <option value="Divorciado">Divorciado</option>
+                                <option value="Solteiro">Solteiro</option>
+                                <option value="Viuvo">Viúvo</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6" id="dados-proprietario">
+                            <label for="txt-data-nascimento" class="form-label">Celular</label>
+                            <input type="tel" class="form-control" id="celular" placeholder="11999555222">
+                            <span class="form-text">(com DDD, apenas números)</span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row">
+                        <legend>Endereço do Proprietário</legend>
+                        <div class="col-md-8" id="dados-proprietario">
+                            <label for="txt-rua-proprietario" class="form-label">Rua (com número da casa)</label>
+                            <input type="text" class="form-control" id="rua-proprietario">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-proprietario">
+                            <label for="txt-cep" class="form-label">CEP</label>
+                            <span class="form-text">(apenas números)</span>
+                            <input type="text" class="form-control" id="cep">
+                        </div>
+                        <div class="col-md-8" id="dados-proprietario">
+                            <label for="txt-bairro-proprietario" class="form-label">Bairro</label>
+                            <input type="text" class="form-control" id="bairro-proprietario">
+                        </div>
+                        <div class="col-md-8" id="dados-proprietario">
+                            <label for="txt-cidade-proprietario" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="cidade-proprietario">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-proprietario">
+                            <label for="txt-estado" class="form-label">Estado</label>
+                            <select class="form-control" name="estado-proprietario" id="estado-proprietario">
+                                <option value selected="select"> --Selecione-- </option>
+                                <option value="Alagoas">Alagoas</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Amapa">Amapá</option>
+                                <option value="Bahia">Bahia</option>
+                                <option value="Ceara">Ceará</option>
+                                <option value="Distrito-Federal">Distrito Federal</option>
+                                <option value="Espirito-Santo">Espírito Santo</option>
+                                <option value="Goias">Goiás</option>
+                                <option value="Maranhao">Maranhão</option>
+                                <option value="Minas-Gerais">Minas Gerais</option>
+                                <option value="Mato-Grosso-do-Sul">Mato Grosso do Sul</option>
+                                <option value="Mato-Grosso">Mato Grosso</option>
+                                <option value="Paraiba">Paraíba</option>
+                                <option value="Pernambuco">Pernambuco</option>
+                                <option value="Piaui">Piauí</option>
+                                <option value="Parana">Paraná</option>
+                                <option value="Rio-de-Janeiro">Rio de Janeiro</option>
+                                <option value="Rio-Grande-do-Norte">Rio Grande do Norte</option>
+                                <option value="Rondoia">Rôndonia</option>
+                                <option value="Roraima">Roraima</option>
+                                <option value="Rio-Grande-do-Sul">Rio Grande do Sul</option>
+                                <option value="Santa-Catarina">Santa Catarina</option>
+                                <option value="Sergipe">Sergipe</option>
+                                <option value="Sao-Paulo">São Paulo</option>
+                                <option value="Tocantins">Tocantins</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <hr>
+                <!-- Dados do imóvel-->
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row">
+                        <legend>Dados do Imóvel</legend>
+                        <div class="col-md-6 col-xl-4" id="dados-imovel">
+                            <label for="txt-area-util" class="form-label">Área Útil M²</label>
+                            <input type="text" class="form-control" id="area-util">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-imovel">
+                            <label for="txt-area-total" class="form-label">Área Total M²</label>
+                            <input type="text" class="form-control" id="area-total">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-imovel">
+                            <label for="txt-dormitorios" class="form-label">Dormitórios (Qtn)</label>
+                            <input type="text" class="form-control" id="dormitorios">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-imovel">
+                            <label for="txt-suites" class="form-label">Suítes (Qtn)</label>
+                            <input type="text" class="form-control" id="suites">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-imovel">
+                            <label for="txt-vagas" class="form-label">Vagas (Qtn)</label>
+                            <input type="text" class="form-control" id="vagas">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row">
+                        <legend>Endereço do Imóvel</legend>
+                        <div class="col-md-8" id="dados-imovel">
+                            <label for="txt-rua-proprietario" class="form-label">Rua (com número da casa)</label>
+                            <input type="text" class="form-control" id="rua-imovel">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-imovel">
+                            <label for="txt-cep" class="form-label">CEP</label>
+                            <span class="form-text">(apenas números)</span>
+                            <input type="text" class="form-control" id="cep-imovel">
+                        </div>
+                        <div class="col-md-8" id="dados-imovel">
+                            <label for="txt-bairro-proprietario" class="form-label">Bairro</label>
+                            <input type="text" class="form-control" id="bairro-imovel">
+                        </div>
+                        <div class="col-md-8" id="dados-imovel">
+                            <label for="txt-cidade-proprietario" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="cidade-imovel">
+                        </div>
+                        <div class="col-md-6 col-xl-4" id="dados-imovel">
+                            <label for="txt-estado" class="form-label">Estado</label>
+                            <select class="form-control" name="estado-proprietario" id="estado-imovel">
+                                <option value selected="select"> --Selecione-- </option>
+                                <option value="Alagoas">Alagoas</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Amapa">Amapá</option>
+                                <option value="Bahia">Bahia</option>
+                                <option value="Ceara">Ceará</option>
+                                <option value="Distrito-Federal">Distrito Federal</option>
+                                <option value="Espirito-Santo">Espírito Santo</option>
+                                <option value="Goias">Goiás</option>
+                                <option value="Maranhao">Maranhão</option>
+                                <option value="Minas-Gerais">Minas Gerais</option>
+                                <option value="Mato-Grosso-do-Sul">Mato Grosso do Sul</option>
+                                <option value="Mato-Grosso">Mato Grosso</option>
+                                <option value="Paraiba">Paraíba</option>
+                                <option value="Pernambuco">Pernambuco</option>
+                                <option value="Piaui">Piauí</option>
+                                <option value="Parana">Paraná</option>
+                                <option value="Rio-de-Janeiro">Rio de Janeiro</option>
+                                <option value="Rio-Grande-do-Norte">Rio Grande do Norte</option>
+                                <option value="Rondoia">Rôndonia</option>
+                                <option value="Roraima">Roraima</option>
+                                <option value="Rio-Grande-do-Sul">Rio Grande do Sul</option>
+                                <option value="Santa-Catarina">Santa Catarina</option>
+                                <option value="Sergipe">Sergipe</option>
+                                <option value="Sao-Paulo">São Paulo</option>
+                                <option value="Tocantins">Tocantins</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row">
+                        <legend>Objetivo da venda</legend>
+                        <div class="col-md-6 col-xl-6" id="dados-imovel">
+                            <label for="txt-pretende" class="form-label">Pretende</label>
+                            <select class="form-control" name="pretende" id="pretende">
+                                <option value selected="select"> --Selecione-- </option>
+                                <option value="Alugar">Alugar</option>
+                                <option value="Vender">Vender</option>
+                                <option value="Alugar-e-vender">Alugar e Vender</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-xl-6" id="dados-imovel">
+                            <label for="txt-tipo" class="form-label">Tipo</label>
+                            <select class="form-control" name="tipo" id="imv-tipo">
+                                <option value selected="select"> --Selecione-- </option>
+                                <option value="Apartamento"> Apartamento </option>
+                                <option value="Casa"> Casa </option>
+                                <option value="Casa-em-condominio"> Casa em Condomínio </option>
+                                <option value="Cobertura"> Cobertura </option>
+                                <option value="Duplex"> Duplex </option>
+                                <option value="Triplex"> Triplex </option>
+                                <option value="Terreno"> Terreno </option>
+                                <option value="Terreno-em-condominio"> Terreno em Condomínio </option>
+                                <option value="Conjunto-comercial"> Conjunto Comercial </option>
+                                <option value="Flat"> Flat </option>
+                                <option value="Galpao"> Galpão </option>
+                                <option value="Loft"> Loft </option>
+                                <option value="Loja"> Loja </option>
+                                <option value="Loja-em-edificio"> Loja em Edifício </option>
+                                <option value="Predio"> Prédio </option>
+                                <option value="Studio"> Studio </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-xl-6" id="dados-imovel">
+                            <label for="txt-finalidade" class="form-label">Finalidade</label>
+                            <select class="form-control" name="finalidade" id="finalidade">
+                                <option value selected="select"> --Selecione-- </option>
+                                <option value="Comercial"> Comercial </option>
+                                <option value="Residencial"> Residencial </option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row">
+                        <legend>Dados do Imóvel</legend>
+                        <div class="col-md-6 col-xl-6" id="dados-imovel">
+                            <label for="txt-valor-venda" class="form-label">Valor de Venda R$</label>
+                            <input type="text" class="form-control" id="valor-venda">
+                        </div>
+                        <div class="col-md-6 col-xl-6" id="dados-imovel">
+                            <label for="txt-valor-locacao" class="form-label">Valor de Locação R$</label>
+                            <input type="text" class="form-control" id="valor-locacao">
+                        </div>
+                        <div id="inf-adc">
+                            <label>Informações Adicionais</label>
+                            <textarea class="form-control" name="info-adc" id="info-adc" rows="4"></textarea>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto" id="btn-vendas-usuario">
+                    <button type="button" class="btn btn-outline-secondary">Cadastrar Imóvel</button>
+                </div>
+            </div>
+        </form>
+    </div>
     <!-- FOOTER -->
     <footer class="container-fluid bg-dark-color" id="footer">
-      <div class="container">
-        <div class="row">
-          <!-- FOOTER TOP -->
-          <div class="col-12" id="footer-top">
-            <div class="row justify-content-between">
-              <div class="col-4">
-                <h2>
-                  CL&C
-                </h2>
-              </div>
-              <div class="col-4" id="social-icons">
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-youtube"></i>
-                <i class="bi bi-twitter"></i>
-              </div>
-            </div>
-          </div>
-          <!-- FOOTER DETAILS -->
-          <div class="col-12" id="footer-details">
+        <div class="container">
             <div class="row">
-              <div class="col-12 col-md-4" id="news-container">
-                <h4>Fique por dentro das novidades</h4>
-                <p class="secondary-color">
-                  Inscreva-se para saber em primeira mão
-                </p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Digite o seu e-mail"
-                    />
-                  </div>
-                  <button class="btn btn-dark">Inscrever</button>
-                </form>
-              </div>
-              <div class="col-12 col-md-4" id="contact-container">
-                <h4>Formas de contato</h4>
-                <p class="secondary-color">(48)9999-9999</p>
-                <p class="secondary-color">contato@CL&C.com</p>
-              </div>
-              <div class="col-12 col-md-4" id="links-container">
-                <div class="row">
-                  <h4>Você pode estar buscando por:</h4>
-                  <div class="col-6">
-                    <ul class="list-unstyled">
-                      <li><a href="vendas.html" class="secondary-color">Imóveis</a></li>
-                      <li><a href="vendas_usuario.html" class="secondary-color">Vendas</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <ul class="list-unstyled">
-                      <li><a href="trabalhe_conosco.html" class="secondary-color">Trabalhe conosco</a></li>
-                      <li><a href="contato.html" class="secondary-color">Contato</a></li>
-                      <li><a href="termos.html" class="secondary-color">Termos de Uso</a></li>
-                      <li><a href="quemSomos.html" class="secondary-color">Quem Somos</a></li>
-                      <li><a href="privacidade.html" class="secondary-color">Políticas de Privacidade</a></li>
-                    </ul>
-                  </div>
+                <!-- FOOTER TOP -->
+                <div class="col-12" id="footer-top">
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <h2>
+                                CL&C
+                            </h2>
+                        </div>
+                        <div class="col-4" id="social-icons">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-youtube"></i>
+                            <i class="bi bi-twitter"></i>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <!-- FOOTER DETAILS -->
+                <div class="col-12" id="footer-details">
+                    <div class="row">
+                        <div class="col-12 col-md-4" id="news-container">
+                            <h4>Fique por dentro das novidades</h4>
+                            <p class="secondary-color">
+                                Inscreva-se para saber em primeira mão
+                            </p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Digite o seu e-mail" />
+                                </div>
+                                <button class="btn btn-dark">Inscrever</button>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-4" id="contact-container">
+                            <h4>Formas de contato</h4>
+                            <p class="secondary-color">(48)9999-9999</p>
+                            <p class="secondary-color">contato@CL&C.com</p>
+                        </div>
+                        <div class="col-12 col-md-4" id="links-container">
+                            <div class="row">
+                                <h4>Você pode estar buscando por:</h4>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="vendas.html" class="secondary-color">Imóveis</a></li>
+                                        <li><a href="vendas_usuario.html" class="secondary-color">Vendas</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="trabalhe_conosco.html" class="secondary-color">Trabalhe conosco</a>
+                                        </li>
+                                        <li><a href="contato.html" class="secondary-color">Contato</a></li>
+                                        <li><a href="termos.html" class="secondary-color">Termos de Uso</a></li>
+                                        <li><a href="quemSomos.html" class="secondary-color">Quem Somos</a></li>
+                                        <li><a href="privacidade.html" class="secondary-color">Políticas de
+                                                Privacidade</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER BOTTOM -->
+                <div class="col-12" id="footer-bottom">
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-md-3">
+                            <p class="secondary-color">Casa & Lar Consultoria &copy; 2023</p>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <p class="secondary-color">
+                                Realizamos o seu projeto com
+                                <i class="bi bi-heart"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- FOOTER BOTTOM -->
-          <div class="col-12" id="footer-bottom">
-            <div class="row justify-content-between">
-              <div class="col-12 col-md-3">
-                <p class="secondary-color">Casa & Lar Consultoria &copy; 2023</p>
-              </div>
-              <div class="col-12 col-md-3">
-                <p class="secondary-color">
-                  Realizamos o seu projeto com
-                  <i class="bi bi-heart"></i>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </footer>
-  </body>
+    <script src="/backend/index.js"></script>
+</body>
+
 </html>
