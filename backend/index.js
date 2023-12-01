@@ -30,6 +30,7 @@ const imvValorLoc = document.querySelector('#valor-locacao');
 const imvInfoAdc = document.querySelector('#info-adc');
 
 
+
 btn.addEventListener('click', function (e) {
     e.preventDefault();
     const formVenda = {
